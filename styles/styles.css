@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pic01 {
+  grid-area: pic01;
+}
+.pic02 {
+  grid-area: picW02;
+}
+.pic03 {
+  grid-area: pic03;
+}
+.pic04 {
+  grid-area: picH04;
+}
+.pic05 {
+  grid-area: picW05;
+}
+.pic06 {
+  grid-area: pic06;
+}
+.pic07 {
+  grid-area: picH07;
+}
+.pic08 {
+  grid-area: pic08;
+}
+
+.piccontainer {
+  display: grid;
+  overflow: hidden;
+  width: 267px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-areas:
+    "pic01"
+    "pic03"
+    "picH04"
+    "picH04"
+    "picH07"
+    "picH07"
+    "pic06"
+    "pic08";
+}
+
+@media only screen and (min-width: 600px) {
+  .piccontainer {
+    width: 533px;
+    grid-template-areas:
+      "pic01  pic03"
+      "picW02 picW02"
+      "picH04 picH07"
+      "picH04 picH07"
+      "picW05 picW05"
+      "pic06  pic08";
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .piccontainer {
+    width: 800px;
+    grid-template-areas:
+      "pic01  pic03  picH07"
+      "picW02 picW02 picH07"
+      "pic06  picW05 picW05";
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .piccontainer {
+    width: 1333px;
+    grid-template-areas:
+      "pic01  pic03  picH04  picW05 picW05"
+      "picW02 picW02 picH04  pic06  pic08";
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .piccontainer {
+    width: 1600px;
+    grid-template-areas:
+      "pic01  pic03  picH04 picH07 picW05 picW05"
+      "picW02 picW02 picH04 picH07 pic06  pic08";
+  }
+}
